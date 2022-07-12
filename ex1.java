@@ -1,38 +1,27 @@
 import java.util.Scanner;
 
 /**
- * Essai
+ * ex1
  */
 public class ex1 {
-    static Scanner input = new Scanner (System.in) ;
-
 public static void main(String[] args) {
-System.out.println("Quel est ton prénom ?");       
-String Prenom =FirstName("Sébastien");
-System.out.println("Quel est ton nom ?");
-String nom = DisplayName("Baloge") ;
-String nomComplet = FullName("Sébastien", "Baloge");
+Scanner input = new Scanner(System.in) ;
+System.out.println("Entrez votre prénom");
+String name = input.nextLine();
+System.out.println("Entrez votre nom de famille");
+String firstName = input.nextLine() ;
+input.close();
+FullName(name, firstName); 
+}
+static void FullName (String _name, String _firstName) {
+    if (_name.equals ("Sébastien")  && _firstName.equals ("Baloge") ) {
+        System.out.println("Bonjour magesté !");
+        
+    }
+    else {
+        System.out.println("Vous vous appelez " + _name + _firstName + ".");
+    }
 
-}
-static String DisplayName (String name){
-name = "Baloge" ;
-System.out.println("Ton nom est " + name);
-return name ;
-}
-static String FirstName (String name) {
-    name ="Sébastien";
-    System.out.println("Ton prénom est " + name);
-return name ;
-}
-static String FullName (String firstName, String name) {
-firstName = "Sébastien";
-name = "Baloge";
-
-    System.out.println("Quel est ton prénom ?");
-System.out.println("Ton prénom est " + firstName);
-    System.out.println("Quel est ton nom ?");
-System.out.println("Ton nom est " + name);
-return name ;
 }
     
 }
